@@ -1,0 +1,46 @@
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>@ViewBag.Message</h1>
+
+    <p class="lead">This app is a template on the .NET Framework 4.8, with Bootstrap 5, Jquery, Toastr, Font Awesome and Datatable</p>
+    <p><a href="#" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2><i class="fa-brands fa-bootstrap"></i> To look cute</h2>
+        <p>
+
+            The bootstrap version used is Bootstrap 5.2.2 with bundle
+        </p>
+        <p><a class="btn btn-success" href="https://getbootstrap.com/">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2><i class="fa-solid fa-bell"></i> For notification</h2>
+        <p>The template has toastr for its simple compatibility with jquery</p>
+        <p><a class="btn btn-warning" href="https://codeseven.github.io/toastr/">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2><i class="fa-solid fa-table"></i> For DataTable</h2>
+        <p>For the use of tables, version 1.13.1 is already in the bundle with all the extensions enabled</p>
+        <p><a class="btn btn-danger" href="https://datatables.net/">Learn more &raquo;</a></p>
+    </div>
+</div>
+@section Scripts
+    {
+    @Scripts.Render("~/bundles/Utils")
+}
+
+<script>
+
+    $(document).ready(function () {
+        toastr.success('Success messages');
+        toastr.error('errors messages');
+        toastr.warning('warning messages');
+        toastr.info('info messages');
+
+    });
+</script>
